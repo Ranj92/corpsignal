@@ -1,0 +1,77 @@
+/*
+ * Global styles for CorpSignal.
+ * Tailwind CSS v4 (CSS-first config) + custom base styles.
+ */
+@import "tailwindcss";
+
+/* ──────────────────────────────────────────────
+   Custom theme tokens
+   ────────────────────────────────────────────── */
+@theme {
+  /* Font family */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+/* ──────────────────────────────────────────────
+   Global base styles
+   ────────────────────────────────────────────── */
+@layer base {
+  /* Smooth scrolling site-wide */
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Light background base */
+  body {
+    @apply bg-slate-50 text-slate-900;
+    font-family: var(--font-sans);
+  }
+
+  /* Custom scrollbar (WebKit browsers) */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: rgba(99, 102, 241, 0.3);
+    color: white;
+  }
+}
+
+/* ──────────────────────────────────────────────
+   Tiptap editor overrides
+   ────────────────────────────────────────────── */
+.ProseMirror {
+  outline: none !important;
+  min-height: 100px;
+}
+
+.ProseMirror p {
+  margin-bottom: 0.5em;
+}
+
+.ProseMirror p:last-child {
+  margin-bottom: 0;
+}
+
+/* Line clamp utility for collapsed post cards */
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

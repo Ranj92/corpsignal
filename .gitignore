@@ -1,0 +1,27 @@
+# Frontend
+client/node_modules/
+client/dist/
+client/.env
+client/.env.*
+!client/.env.example
+
+# Supabase
+supabase/.env
+supabase/.env.*
+!supabase/.env.example
+supabase/.temp/
+supabase/.db-password
+
+# Legacy ASP.NET build/runtime output
+**/bin/
+**/obj/
+server/src/CorpSignal.Api/uploads/
+
+# Editors and operating systems
+.tmp/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+*.user
+*.suo
