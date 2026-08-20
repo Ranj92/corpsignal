@@ -4,6 +4,7 @@ client/dist/
 client/.env
 client/.env.*
 !client/.env.example
+!client/.env.production
 
 # Supabase
 supabase/.env
